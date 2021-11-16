@@ -1,0 +1,167 @@
+/* For desktop: */
+
+/**Estilos de la página de logueo**/
+/**Cabecera-header**/
+/**Ponemos la cabecera de color de fondo transparente.**/
+
+  .header {
+    background-color: transparent; /**Ponemos la cabecera de color de fondo transparente.**/
+    position: relative; /**Ponemos la cabecera RELATIVE, si la pusieramos ABSOLUTE/FIXED
+      esta llegaria hasta las letras del h1 alineadas a la izquierda.**/
+  }
+
+  /**Ponemos h1 (texto) centrado, de color blanco y cursiva**/
+
+  .header h1 {
+    text-align: center;
+    font-style: italic;
+    color: white;
+  }
+  /**Ponemos el anchor de los idiomas en la derecha y en color blanco. **/
+  .header a {
+    color: white;
+  }
+  /**Ponemos la bandera americana y española en un bloque "div" junto al elemento "a" mencionado antes.
+Con el display inline-flex conseguimos que el link y el icono de la bandera estén alineados. Si pusieramos inline-block
+la bandera aparecería un pelin por encima del link. **/
+  .header div {
+    display: inline-flex;
+    /**separamos bandera y link con 5px de margen a la izquierda para la bandera. Establecemos un ancho del icono de 20px**/
+  }
+  .header div img {
+    margin-left: 5px;
+    width: 20px;
+  }
+
+  /**EL loginform contiene todos los elementos desde el icono hasta el botón (que en realidad es un "a")**/
+  #loginform {
+    align-self: flex-start;
+    display: grid;
+    margin-top: 5%;
+    height: 360px;
+  }
+  .contenedorimagen {
+    /**El contenedor de history lo centramos y separamos 10px de la casilla de username por debajo**/
+    text-align: center;
+    margin-bottom: 5px;
+    margin: auto;
+
+    /**El icono de history le damos forma redonda y separamos 10px del contenedor que lo contenie**/
+  }
+  .contenedorimagen img {
+    border-radius: 50%;
+    margin-top: 0px;
+    padding-bottom: 15px;
+  }
+  /**Formatos para los campos de username y password, tanto para el input como para el propio cascaron que los envuelven**/
+  .fieldset {
+    width: 300px;
+    text-align: center;
+    padding-left: 10px;
+    border-color: white;
+    border-width: 5px;
+    display: block;
+    margin: auto;
+  }
+  .fieldset input {
+    border: none;
+
+    width: auto;
+    text-align: center;
+  }
+  .fieldsetpwd {
+    width: 300px;
+    text-align: center;
+    padding: 10px;
+    border-color: white;
+    border-width: 5px;
+    display: block;
+    margin: auto;
+  }
+  .fieldsetpwd input {
+    border: none;
+    width: 25%;
+    width: auto;
+    text-align: center;
+  }
+  .checkbox {
+    text-align: center;
+    margin-top: 20px;
+  }
+  /**Con el padding de 20 separamos el boton 20px arriba y 20px abajo del contenedor que lo contiene**/
+  .boton {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    display: block;
+    margin: auto;
+
+    /**Con el padding de 5 separamos el link del propio "cascaron negro" 5px arriba y 5px abajo.
+Con inset le damos ese estilo al borde metalizado tan chulo **/
+  }
+  .boton a {
+    background: #000;
+    color: #fff;
+    border-style: inset;
+    border-radius: 90px;
+    padding: 5px;
+    display: block;
+    margin-bottom: 100%;
+  }
+  /**EL footer contiene propiedades similares al header **/
+
+  .footer {
+    background-color: #84004f;
+
+    position: absolute;
+    right: 0;
+    bottom: 40;
+    left: 0;
+    padding: 1rem;
+    /*centramos el texto del footer*/
+    text-align: center;
+  }
+  .footer h2 {
+    color: white;
+  }
+  .footer a {
+    padding-bottom: 5px;
+    color: white;
+    text-align: center;
+    display: block;
+
+    margin: auto;
+    /*Ponemos width para fijar el ancho del background color gold al tamaño del texto (='subscribe')*/
+    width: fit-content;
+  }
+  .footer a:hover {
+    color: green;
+    background-color: gold;
+    text-decoration: none;
+    padding: 5px;
+  }
+  .footer a:visited {
+    color: royalblue;
+    text-decoration: none;
+  }
+
+  /**Animacion para cambiar de colores el fondo de forma dinámica **/
+  body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    -webkit-animation: gradient 15s ease infinite;
+    animation: gradient 15s ease infinite;
+  }
+
+  @-webkit-keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+

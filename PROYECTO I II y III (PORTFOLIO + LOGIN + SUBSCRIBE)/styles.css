@@ -1,0 +1,130 @@
+@media (max-width: 1800px) and (orientation: landscape) {
+  body {
+    font-family: "Fruktur", cursive;
+    font-family: "Zen Kurenaido", sans-serif;
+    background: linear-gradient(-45deg, #383636, #5f5056, #6c92a0, #badd3b);
+    background-size: 600% 600%;
+    -webkit-animation: gradient 15s ease infinite;
+    animation: gradient 15s ease infinite;
+  }
+
+  @-webkit-keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .header {
+    background-color: rgba(0, 0, 0, 0.342);
+  
+    margin: 0;
+    position: fixed;
+    width: 98%;
+    height: 50px;
+    text-align: right;
+    padding-bottom: 30px;
+  }
+
+  .header .icon {
+    display: inline-flex;
+    margin-right: 1200px;
+    padding: 2px;
+    text-align: center;
+
+    /**separamos bandera y link con 5px de margen a la izquierda para la bandera. Establecemos un ancho del icono de 20px**/
+  }
+  .header .icon img {
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+    padding-top: 15px;
+  }
+  .header .icon a {
+    color: white;
+    padding-top: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 5px;
+  }
+
+  .header a {
+    color: blue;
+    font-size: small;
+    padding: 0px;
+    width: max-content;
+    font-family: "Courier New", Courier, monospace;
+    margin-right: 25px;
+  }
+  .header a:hover {
+    background-color: gold;
+    padding: 10px;
+  }
+
+  main {
+    padding-top: 100px;
+    height: 450px;
+  }
+
+  .bloque1 {
+    padding-top: 10px;
+    color: white;
+  }
+
+  .bloque2 {
+    width: 550px;
+    height: 200px;
+    text-align: center;
+    margin-top: 125px;
+    margin-left: 390px;
+  }
+
+  .bloque2 p:hover {
+    transform: scale(1.2);
+  }
+
+  .bloque2 p {
+    color: white;
+  }
+  .footer {
+    text-align: center;
+  }
+span{
+    color: white;
+    float:center;
+    position:relative;
+    cursor:pointer;
+}
+span:hover span{
+    display:block;
+}
+
+  .fa{
+     display:  inline-flex;
+     padding: 2px;
+  }
+
+  .parent{
+    background-color: coral;
+    border: solid 10px black;
+    width: 300px;
+    height: 300px;
+  }
+
+  .child{
+    background-color: crimson;
+    border: solid 10px blueviolet;
+    padding: 20px; 
+    width: 100%;
+    color: white;
+    box-sizing: border-box;
+
+  }
+
+}
+

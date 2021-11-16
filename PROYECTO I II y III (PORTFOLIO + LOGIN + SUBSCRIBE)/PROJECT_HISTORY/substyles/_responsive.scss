@@ -1,0 +1,23 @@
+$layout-mobile: 390px;
+$layout-ipad: 768px;
+$layout-desktop: 1200px;
+
+/**maxwidth es eso o menos - Es decir, de 390px hacia abajo**/
+
+@mixin mobile {
+  @media (max-width: #{$layout-mobile}) {
+    @content;
+  }
+}
+
+@mixin ipad {
+  @media (min-width: #{$layout-ipad}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width:  #{$layout-desktop}) {
+    @content;
+  }
+}

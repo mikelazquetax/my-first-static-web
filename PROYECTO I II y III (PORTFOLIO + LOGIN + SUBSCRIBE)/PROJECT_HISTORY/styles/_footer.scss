@@ -1,0 +1,34 @@
+/**EL footer contiene propiedades similares al header **/
+
+.footer {
+  position: fixed;
+
+  /*centramos el texto del footer*/
+  text-align: center;
+  display: contents;
+
+  h2 {
+    color: white;
+  }
+  a {
+    padding-bottom: 5px;
+    color: white;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+
+    margin: auto;
+    /*Ponemos width para fijar el ancho del background color gold al tamaño del texto (='subscribe')*/
+    width: fit-content;
+
+    &:hover {
+      background-color: green;
+      text-decoration: none;
+      padding: 5px;
+    }
+    &:visited {
+      color: gold;
+      text-decoration: none;
+    }
+  }
+}

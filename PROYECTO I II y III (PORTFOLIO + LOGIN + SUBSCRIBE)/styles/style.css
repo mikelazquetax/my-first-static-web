@@ -1,0 +1,292 @@
+/**maxwidth es eso o menos**/
+.header {
+  background-color: rgba(0, 0, 0, 0.342);
+  margin: 0;
+  width: 100%;
+  height: 10%;
+  text-align: right;
+  padding-bottom: 2%;
+}
+
+@media (max-width: 390px) {
+  .header {
+    width: 95%;
+  }
+}
+
+.header .icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 100%;
+  padding: 1%;
+  text-align: center;
+  /**separamos bandera y link con 5px de margen a la izquierda para la bandera. Establecemos un ancho del icono de 20px**/
+}
+
+.header .icon img {
+  margin-left: 1%;
+  width: 40%;
+  height: 40%;
+  padding-top: 15%;
+}
+
+@media (max-width: 390px) {
+  .header .icon img {
+    width: 30%;
+    height: 30%;
+  }
+}
+
+@media (min-width: 992px) {
+  .header .icon img {
+    width: 30%;
+    height: 30%;
+    margin-top: 3%;
+  }
+}
+
+.header .icon a {
+  color: white;
+  text-decoration: none;
+  padding-top: 15%;
+  padding-left: 0%;
+  padding-right: 0%;
+  margin-right: 5%;
+}
+
+@media (max-width: 390px) {
+  .header .icon a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .header .icon a {
+    font-size: xx-large;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header .icon a {
+    font-size: medium;
+  }
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+  font-size: small;
+  padding: 0%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-family: "Courier New", Courier, monospace;
+  margin-right: 2%;
+}
+
+@media (max-width: 390px) {
+  .header a {
+    margin: 0%;
+  }
+}
+
+@media (min-width: 992px) {
+  .header a {
+    font-size: xx-large;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header a {
+    font-size: medium;
+  }
+}
+
+.header a:hover {
+  background-color: gold;
+  padding: 1%;
+}
+
+.footer {
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .footer {
+    font-size: xx-large;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer {
+    font-size: medium;
+  }
+}
+
+.footer span {
+  color: white;
+  float: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.footer span .fa {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 2px;
+}
+
+.parent {
+  background-color: coral;
+  border: solid 10px black;
+  width: 300px;
+  height: 300px;
+}
+
+.parent .child {
+  background-color: crimson;
+  border: solid 10px blueviolet;
+  padding: 20px;
+  width: 100%;
+  color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Fruktur", cursive;
+  font-family: "Zen Kurenaido", sans-serif;
+  background: linear-gradient(-45deg, #383636, #5f5056, #6c92a0, #badd3b);
+  background-size: 600% 600%;
+  -webkit-animation: gradient 15s ease infinite;
+  animation: gradient 15s ease infinite;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+main {
+  padding-top: 1%;
+  height: 100%;
+}
+
+main .bloque1 {
+  display: inline-block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 2%;
+  color: white;
+  position: fixed;
+}
+
+main .bloque1 .maz {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 390px) {
+  main .bloque1 {
+    font-size: small;
+    position: relative;
+    width: 98%;
+  }
+  main .bloque1 .maz {
+    margin-left: 43%;
+    margin-top: 10%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (min-width: 992px) {
+  main .bloque1 {
+    font-size: xx-large;
+  }
+  main .bloque1 .maz {
+    width: 10%;
+  }
+}
+
+@media (min-width: 1200px) {
+  main .bloque1 {
+    font-size: medium;
+  }
+}
+
+main .bloque2 {
+  display: inline-block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  height: 30%;
+  text-align: center;
+  margin-top: 18%;
+  margin-left: 25%;
+}
+
+@media (max-width: 390px) {
+  main .bloque2 {
+    font-size: small;
+    margin-top: 1%;
+    margin-bottom: 2%;
+  }
+}
+
+@media (min-width: 992px) {
+  main .bloque2 {
+    font-size: xx-large;
+    margin-bottom: 10%;
+    margin-top: 30%;
+  }
+}
+
+@media (min-width: 1200px) {
+  main .bloque2 {
+    font-size: medium;
+    margin-top: 10%;
+  }
+}
+
+main .bloque2 p {
+  color: white;
+}
+
+main .bloque2 p:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+/*# sourceMappingURL=style.css.map */

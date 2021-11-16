@@ -1,0 +1,10 @@
+@mixin viewport() {
+  max-width: calc(120vw - 20vw);
+  min-height: 100vh;
+}
+
+@mixin flexCenter($direction) {
+  display: inline-block;
+  align-items: $direction;
+  justify-content: center;
+}

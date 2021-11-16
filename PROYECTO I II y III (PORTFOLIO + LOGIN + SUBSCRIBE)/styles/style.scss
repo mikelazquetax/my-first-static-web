@@ -1,0 +1,99 @@
+@import "./variables";
+@import "./mixins";
+@import "./responsive";
+@import "./navBar";
+@import "./footer";
+
+body {
+  font-family: "Fruktur", cursive;
+  font-family: $primaryFont;
+  background: linear-gradient(-45deg, #383636, #5f5056, #6c92a0, #badd3b);
+  background-size: 600% 600%;
+  -webkit-animation: gradient 15s ease infinite;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+main {
+  padding-top: 1%;
+  height: 100%;
+
+  .bloque1 {
+    @include flexCenter(center);
+    padding-top: 2%;
+    color: white;
+    position: fixed;
+
+    .maz {
+      align-items: center;
+    }
+
+    @include mobile {
+      font-size: small;
+      position: relative;
+      width: 98%;
+
+      .maz {
+        margin-left: 43%;
+        margin-top: 10%;
+        align-items: center;
+      }
+    }
+
+    @include for-tablet-landscape {
+      font-size: xx-large;
+      .maz {
+        width: 10%;
+      }
+    }
+
+    @include for-desktop-landscape {
+      font-size: medium;
+    }
+  }
+
+  .bloque2 {
+    @include flexCenter(center);
+    width: 50%;
+    height: 30%;
+    text-align: center;
+    margin-top: 18%;
+    margin-left: 25%;
+
+    @include mobile {
+      font-size: small;
+      margin-top: 1%;
+      margin-bottom: 2%;
+    }
+
+    @include for-tablet-landscape {
+      font-size: xx-large;
+      margin-bottom: 10%;
+      margin-top: 30%;
+    }
+
+    @include for-desktop-landscape {
+      font-size: medium;
+      margin-top: 10%;
+    }
+
+    p {
+      color: white;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

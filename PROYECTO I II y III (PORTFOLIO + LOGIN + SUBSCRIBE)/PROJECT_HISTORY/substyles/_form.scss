@@ -1,0 +1,156 @@
+/**queremos inline-block porque metemos paddings y margins**/
+.bloque {
+  display: inline-block;
+  align-content: center;
+
+  @include mobile {
+    display: block;
+  }
+}
+.x {
+  padding-inline: 100px;
+
+  @include mobile {
+    padding-inline: 10%;
+  }
+  @include ipad {
+    padding-inline: 30%;
+  }
+}
+
+legend {
+  align-items: center;
+  padding-right: 30px;
+  font-size: 30px;
+  @include ipad {
+    font-size: 180%;
+  }
+}
+
+input {
+  margin-left: 30px;
+  align-content: center;
+  @include mobile {
+    font-size: large;
+    margin-left: 0%;
+  }
+
+  @include ipad {
+    font-size: large;
+  }
+}
+
+select {
+  @include mobile {
+    font-size: medium;
+  }
+  @include ipad {
+    font-size: large;
+  }
+}
+
+.fieldset {
+  background-color: #94b1db;
+  color: white;
+  label {
+    @include ipad {
+      font-size: 130%;
+    }
+  }
+}
+
+.y {
+  @include mobile {
+    font-size: x-large;
+    padding-inline: 0%;
+  }
+  @include ipad {
+    padding-inline: 15%;
+    font-size: large;
+  }
+  @include desktop {
+    padding-inline: 25%;
+  }
+
+  textarea {
+    background: linear-gradient(-45deg, #383636, #5f5056, #6d8f9b, #3c3f3e);
+    background-size: 400% 400%;
+    -webkit-animation: gradient 15s ease infinite;
+    animation: gradient 15s ease infinite;
+    color: white;
+    font-weight: bold;
+    align-content: center;
+    margin-left: 50px;
+  }
+
+  .fieldset {
+    background-color: #94b1db;
+    color: white;
+    padding: 20px;
+    margin-left: 10px;
+
+    legend {
+      font-size: 30px;
+      color: white;
+      @include mobile {
+        font-size: x-large;
+        color: white;
+      }
+      font-style: bold;
+      font-style: italic;
+      color: black;
+    }
+  }
+}
+
+/**Funcionalidad CSS Botón**/
+.btn {
+  @include ipad {
+    margin-left: 30%;
+  }
+
+  @include mobile {
+    margin-left: 0%;
+  }
+  .boton {
+    position: relative;
+    padding: 10px 30px;
+    border: 2px solid #41f321;
+    margin: 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    @include mobile {
+      font-size: 150%;
+    }
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    overflow: hidden;
+
+    @include mobile {
+      margin-top: 1%;
+    }
+
+    &:hover {
+      color: black;
+
+      span {
+        width: 600px;
+        height: 600px;
+      }
+    }
+
+    span {
+      position: absolute;
+      display: block;
+      width: 40px;
+      height: 40px;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: #41f321;
+      transition: width 0.5s, height 0.5s;
+    }
+  }
+}

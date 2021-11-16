@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./substyles/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Fruktur&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+
+    <title>Sing Up</title>
+</head>
+<body> 
+    <form action="https://reqres.in/api/users" method="post" autocomplete="off">
+    <h1 class="h1">Formulario de Envio:</h1>
+      <div class="bloque x">
+      <fieldset class="fieldset">
+        <legend>Datos Personales:</legend>
+        <label for="name">Nombre Jugador:</label>
+        <input type="text" id="name" name="name" required />
+        <br/>
+        <label for="lname">Apellido Jugador:</label>
+        <input type="text" id="lname" name="lname" required />
+        <br/>
+        <label>Selecciona tu CCAA</label>
+        <select name="ccaa" id="ccaa">
+          <option value="navarra">Navarra</option>
+          <option value="euskadi">Euskadi</option>
+          <option value="madrid">Madrid</option>
+          <option value="cataluña">Cataluña</option>
+        </select>
+        <br/>
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" pattern="[A-Za-z0-9]{5,20}" placeholder="Minimo 5 caractéres"/>
+        <br/>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}"/>
+        <br/>
+        <label for="pwd">Contraseña:</label>
+        <input type="password" id="pwd" name="pwd" placeholder="Inserta de 4-8 carácteres" minlength="4" maxlength="8"/>
+        <br/>
+
+        <label for="fecha">Fecha de Envio:</label>
+        <input type="date" id="date" name="date"/>
+        <br/>
+      </fieldset>
+    </div>
+    <div class="bloque y">
+      <fieldset class="fieldset">
+        <legend>Comentarios y Valoraciones</legend>
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="Escriba aqui tu mensaje"></textarea>
+      </br>
+        <label for="suscr">Acepto la politica de privacidad de datos vigente</label>
+        <input type="checkbox" id="suscr" name="suscr" required />
+      </br>
+        <label for="sino">¿Quieres recibir notificaciones de nuestra página web?</label>
+      </br>
+        <input type="radio" id="si" name="si" >Si</input>
+        <input type="radio" id="no" name="no" >No</input>
+
+      </fieldset>
+    </div>
+
+      <div class= "btn">
+        <button class="boton" type="input"><span></span>Send User Information</button>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+          $(document).ready(function(e){
+            $('.boton').on('mouseenter', function(e){
+              x = e.pageX - $(this).offset().left;
+              y = e.pageY - $(this).offset().top;
+              $(this).find('span').css({top:y, left:x})
+            })
+            $('.boton').on('mouseout', function(e){
+              x = e.pageX - $(this).offset().left;
+              y = e.pageY - $(this).offset().top;
+              $(this).find('span').css({top:y, left:x})
+            })
+          })
+        </script>
+      </div>
+      <!---<a name="respuestas" href="formulario.html">Enviar Respuestas</a> <!---Esto lo haremos más adelante para meter el formulario en otro html-->
+  
+    </form>
+
+
+
+</body>
+</html>

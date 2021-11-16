@@ -1,0 +1,133 @@
+body {
+  font-family: "Fruktur", cursive;
+  font-family: "Zen Kurenaido", sans-serif;
+  background: linear-gradient(-45deg, #383636, #5f5056, #6c92a0, #badd3b);
+  background-size: 400% 400%;
+  -webkit-animation: gradient 15s ease infinite;
+  animation: gradient 15s ease infinite;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+html,
+body {
+  place-items: center;
+  display: grid;
+  height: 100%;
+  color: black;
+}
+
+.skills-bar {
+  width: 600px;
+  background: white;
+  border-radius: 10px;
+  padding: 25px 30px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.skills-bar .bar {
+  margin: 20px 0;
+}
+
+.skills-bar .bar:first-child {
+  margin-top: 0px;
+}
+.skills-bar .bar .info {
+  margin-bottom: 5px;
+}
+
+.skills-bar .bar .info span {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.skills-bar .bar .progress-line {
+  position: relative;
+  height: 10px;
+  width: 100%;
+  background: #f0f0f0;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05),
+    0px 1px rgba(255, 255, 255, 0.8);
+}
+.bar .progress-line span {
+  height: 100%;
+  width: 80%;
+  background: #6665ee;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.bar .progress-line.html span {
+  width: 65%;
+}
+
+.bar .progress-line.css span {
+  width: 60%;
+}
+
+.bar .progress-line.js span {
+  width: 55%;
+}
+
+.bar .progress-line.abap span {
+  width: 75%;
+}
+
+.bar .progress-line.sapui5 span {
+  width: 55%;
+}
+
+.bar .progress-line span::before {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: -10px;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+}
+.bar .progress-line span::after {
+  position: absolute;
+
+  right: 0;
+  top: -28px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  background: #000;
+  padding: 1px 8px;
+  border-radius: 3px;
+}
+
+.bar .progress-line.html span::after {
+  content: "65%";
+}
+
+.bar .progress-line.css span::after {
+  content: "60%";
+}
+
+.bar .progress-line.js span::after {
+  content: "55%";
+}
+
+.bar .progress-line.abap span::after {
+  content: "75%";
+}
+
+.bar .progress-line.sapui5 span::after {
+  content: "55%";
+}

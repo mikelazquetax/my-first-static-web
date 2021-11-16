@@ -1,0 +1,139 @@
+body{
+  /**El fichero subscribe.html tiene asignada la fuente Fruktur obtenida de la referencia
+  <link href="https://fonts.googleapis.com/css2?family=Fruktur&family=Zen+Kurenaido&display=swap" rel="stylesheet">**/
+  font-family: 'Fruktur', cursive;
+  font-family: 'Zen Kurenaido', sans-serif;
+  /**El body tiene un fondo de colores dinamico**/
+  background: linear-gradient(-45deg, #383636, #5f5056, #6d8f9b, #16e7b6);
+  background-size: 400% 400%;
+  -webkit-animation: gradient 15s ease infinite;
+        animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient{
+  0%{
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100%{
+      background-position: 0% 50%;
+  }
+}
+
+.h1{
+  color:white;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+/**con hover conseguimos que al pasar el ratón por encima de la cabecera se ponga el color verde y 
+se aplique un padding de 5px consiguiendo un efecto de resalto **/
+h1:hover{
+  
+  color:green;
+  text-decoration: none;
+  padding:5px;
+}
+
+.bloque{
+  display: inline-block;
+ 
+
+}
+
+.x{
+  display: inline-block;
+  padding-inline: 100px;
+ 
+  margin-right: 60px;
+  margin-left:10px
+  
+}
+.x legend{
+  align-items: center;
+  padding-right: 30px;
+}
+.x input{
+
+  margin-left: 30px;
+  
+  align-content: center;
+}
+
+.y{
+  margin-left: 60px;
+  display: inline-block;
+  padding-inline: 100px;
+  
+ 
+}
+
+.y textarea{
+
+  background: linear-gradient(-45deg, #383636, #5f5056, #6d8f9b, #3c3f3e);
+  background-size: 400% 400%;
+  -webkit-animation: gradient 15s ease infinite;
+        animation: gradient 15s ease infinite;
+  color: white;
+  font-weight: bold;
+  align-content: center;
+  margin-left: 50px;
+}
+
+.fieldset {
+    background-color: #94b1db;
+    color: white;
+    padding: 20px;
+    margin-left: 10px;
+
+    
+  }
+  .fieldset legend {
+    font-size: 20px;
+    font-style: bold;
+    font-style: italic;
+    color: black;
+  }
+
+  
+
+
+
+
+ /**Funcionalidad CSS Botón**/
+  .boton{
+    position: relative;
+    padding: 10px 30px;
+    border: 2px solid #41f321;
+    margin: 10px;
+    display: inline-block;
+    text-decoration: none;
+    color:  black;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    overflow: hidden;
+  }
+  .boton:hover
+  {
+    color:black
+  }
+  .boton span{
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 40px;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    background: #41f321;
+    transition: width 0.5s, height 0.5s;
+ 
+  }
+
+  .boton:hover span{
+    width: 600px;
+    height: 600px;
+  }

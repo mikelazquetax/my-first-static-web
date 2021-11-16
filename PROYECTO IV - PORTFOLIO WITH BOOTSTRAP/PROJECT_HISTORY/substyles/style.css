@@ -1,0 +1,267 @@
+@charset "UTF-8";
+/**maxwidth es eso o menos - Es decir, de 390px hacia abajo**/
+/**h1 es una class**/
+.h1 {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  /**con hover conseguimos que al pasar el ratón por encima de la cabecera se ponga el color verde y 
+  se aplique un padding de 5px consiguiendo un efecto de resalto **/
+}
+
+@media (max-width: 390px) {
+  .h1 {
+    font-size: 150%;
+  }
+}
+
+.h1:hover {
+  color: green;
+  text-decoration: none;
+  padding: 5px;
+}
+
+/**queremos inline-block porque metemos paddings y margins**/
+.bloque {
+  display: inline-block;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+@media (max-width: 390px) {
+  .bloque {
+    display: block;
+  }
+}
+
+.x {
+  padding-inline: 100px;
+}
+
+@media (max-width: 390px) {
+  .x {
+    padding-inline: 10%;
+  }
+}
+
+@media (min-width: 768px) {
+  .x {
+    padding-inline: 30%;
+  }
+}
+
+legend {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 30px;
+  font-size: 30px;
+}
+
+@media (min-width: 768px) {
+  legend {
+    font-size: 180%;
+  }
+}
+
+input {
+  margin-left: 30px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+@media (max-width: 390px) {
+  input {
+    font-size: large;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 768px) {
+  input {
+    font-size: large;
+  }
+}
+
+@media (max-width: 390px) {
+  select {
+    font-size: medium;
+  }
+}
+
+@media (min-width: 768px) {
+  select {
+    font-size: large;
+  }
+}
+
+.fieldset {
+  background-color: #94b1db;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .fieldset label {
+    font-size: 130%;
+  }
+}
+
+@media (max-width: 390px) {
+  .y {
+    font-size: x-large;
+    padding-inline: 0%;
+  }
+}
+
+@media (min-width: 768px) {
+  .y {
+    padding-inline: 15%;
+    font-size: large;
+  }
+}
+
+@media (min-width: 1200px) {
+  .y {
+    padding-inline: 25%;
+  }
+}
+
+.y textarea {
+  background: linear-gradient(-45deg, #383636, #5f5056, #6d8f9b, #3c3f3e);
+  background-size: 400% 400%;
+  -webkit-animation: gradient 15s ease infinite;
+  animation: gradient 15s ease infinite;
+  color: white;
+  font-weight: bold;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-left: 50px;
+}
+
+.y .fieldset {
+  background-color: #94b1db;
+  color: white;
+  padding: 20px;
+  margin-left: 10px;
+}
+
+.y .fieldset legend {
+  font-size: 30px;
+  color: white;
+  font-style: bold;
+  font-style: italic;
+  color: black;
+}
+
+@media (max-width: 390px) {
+  .y .fieldset legend {
+    font-size: x-large;
+    color: white;
+  }
+}
+
+/**Funcionalidad CSS Botón**/
+@media (min-width: 768px) {
+  .btn {
+    margin-left: 30%;
+  }
+}
+
+@media (max-width: 390px) {
+  .btn {
+    margin-left: 0%;
+  }
+}
+
+.btn .boton {
+  position: relative;
+  padding: 10px 30px;
+  border: 2px solid #41f321;
+  margin: 10px;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+@media (max-width: 390px) {
+  .btn .boton {
+    font-size: 150%;
+  }
+}
+
+@media (max-width: 390px) {
+  .btn .boton {
+    margin-top: 1%;
+  }
+}
+
+.btn .boton:hover {
+  color: black;
+}
+
+.btn .boton:hover span {
+  width: 600px;
+  height: 600px;
+}
+
+.btn .boton span {
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 40px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #41f321;
+  -webkit-transition: width 0.5s, height 0.5s;
+  transition: width 0.5s, height 0.5s;
+}
+
+body {
+  /**El fichero subscribe.html tiene asignada la fuente Fruktur obtenida de la referencia
+    <link href="https://fonts.googleapis.com/css2?family=Fruktur&family=Zen+Kurenaido&display=swap" rel="stylesheet">**/
+  font-family: "Fruktur", cursive;
+  font-family: "Zen Kurenaido", sans-serif;
+  /**El body tiene un fondo de colores dinamico**/
+  background: linear-gradient(-45deg, #383636, #5f5056, #6d8f9b, #16e7b6);
+  background-size: 400% 600%;
+  -webkit-animation: gradient 15s ease infinite;
+  animation: gradient 15s ease infinite;
+}
+
+@media (max-width: 390px) {
+  body {
+    width: 100%;
+    margin: 0%;
+  }
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,38 @@
+.footer {
+  text-align: center;
+
+  @include for-tablet-landscape {
+    font-size: xx-large;
+  }
+
+  @include for-desktop-landscape {
+    font-size: medium;
+  }
+
+  span {
+    color: white;
+    float: center;
+    position: relative;
+    cursor: pointer;
+
+    .fa {
+      display: inline-flex;
+      padding: 2px;
+    }
+  }
+}
+.parent {
+  background-color: coral;
+  border: solid 10px black;
+  width: 300px;
+  height: 300px;
+
+  .child {
+    background-color: crimson;
+    border: solid 10px blueviolet;
+    padding: 20px;
+    width: 100%;
+    color: white;
+    box-sizing: border-box;
+  }
+}

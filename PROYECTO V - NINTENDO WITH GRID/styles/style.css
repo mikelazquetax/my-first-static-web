@@ -1,0 +1,103 @@
+@charset "UTF-8";
+body {
+  background: #333;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+.respawn header {
+  background-color: crimson;
+  color: white;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  /**Ponemos display grid para hacer la página con este formato**/
+  height: 400px;
+  -ms-grid-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
+  /**Con esto asignamos valores de tamaño a cada una de las columnas que quiero crear
+    con auto auto auto creamos tres columnas de igual tamaño calculadas por el navegador
+    con 30px auto 50px le damos anchura fija a la primera y tercera y la segunda se ajusta automaticamente**/
+  padding: 3%;
+  grid-gap: 10px;
+}
+
+.grid-container > div {
+  background: url("./mando.png");
+  background-size: cover;
+  background-attachment: fixed;
+  cursor: pointer;
+  border: solid 1px black;
+}
+
+.grid-container > div:hover {
+  opacity: 0.3;
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.grid-container .bloq1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / span 2;
+  /*Donde quiero que empiece y termine esta columna*/
+  text-align: right;
+  color: white;
+}
+
+.grid-container .bloq1 a {
+  color: white;
+  text-decoration: none;
+}
+
+.grid-container .bloq2 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  grid-row: 1 / 4;
+  -ms-grid-column: 4;
+  grid-column: 4 / 4;
+  text-align: right;
+  color: white;
+}
+
+.grid-container .bloq3 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  grid-row: 2 / 4;
+  color: white;
+  text-align: right;
+}
+
+.grid-container .bloq3 h3 {
+  color: black;
+}
+
+.grid-container .bloq4 {
+  -ms-grid-row: 2;
+  grid-row: 2 / 2;
+  color: white;
+  text-align: right;
+}
+
+.grid-container .bloq5 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
+  color: white;
+  text-align: right;
+}
+
+.grid-container .bloq6 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / 4;
+  color: white;
+  text-align: right;
+}
+/*# sourceMappingURL=style.css.map */

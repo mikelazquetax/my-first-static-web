@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="./styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    /> 
+    <title>Who's Who - Página de Inicio</title>
+    <script src="login.js"></script>
+  </head>
+  <header class="header">
+    <h1>Página de Inicio</h1>
+    <div class="logos">
+      <a href="./login.html">Inglés</a>
+      <img
+        src="https://emojigraph.org/media/72/google/flag-united-states_1f1fa-1f1f8.png"
+        alt="bandus"
+      />
+    </div>
+  </header>
+  <body>
+    <form class="loginform" method="post">
+      <div class="contenedorimagen">
+        <img src="./logo.PNG" alt="logotipo" />
+      </div>
+      <div class="bloques">
+        <fieldset class="fieldset">
+          <legend>Nombre de Usuario:</legend>
+          <div class="icon"><i class="fa fa-user"></i></div>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            pattern="[A-Za-z0-9]{5,20}"
+            placeholder=" 5 characters min"
+            required
+          />
+        </fieldset>
+        <fieldset class="fieldsetpwd">
+          <legend>Contraseña:</legend>
+          <div class="icon"><i class="fa fa-key"></i></div>
+          <input
+            type="password"
+            id="pwd"
+            name="pwd"
+            placeholder="Inserta de 4-8 carácteres"
+            minlength="4"
+            maxlength="8"
+            required
+          />
+        </fieldset>
+
+        <div class="checkbox">
+          <label for="remember">Recordar Contraseña</label>
+          <input type="checkbox" id="passrem" name="passrem" />
+        </div>
+      </div>
+
+      <div class="boton">
+        <a href="./index.html" id="login" onclick="return recoger()">Log In</a>
+      </div>
+    </form>
+  </body>
+  <footer class="footer">
+    <h2>¿No eres usuario? Subscríbete</h2>
+    <a href="./subscribe.html">Subscribirse <i class="fa fa-envelope"></i></a>
+  </footer>
+</html>

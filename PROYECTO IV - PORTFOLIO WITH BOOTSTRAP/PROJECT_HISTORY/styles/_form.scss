@@ -1,0 +1,97 @@
+/**EL loginform contiene todos los elementos desde el icono hasta el botón (que en realidad es un "a")**/
+.loginform {
+  align-self: flex-start;
+  display: grid;
+  margin-top: 2%;
+
+  .contenedorimagen {
+    /**El contenedor de history lo centramos y separamos 10px de la casilla de username por debajo**/
+    text-align: center;
+
+    margin: auto;
+    padding-bottom: 1%;
+
+    /**El icono de history le damos forma redonda y separamos 10px del contenedor que lo contenie**/
+
+    img {
+      border-radius: 50%;
+      margin-top: 0px;
+      padding-bottom: 15px;
+    }
+  }
+
+  .bloques {
+    display: block;
+    /**Formatos para los campos de username y password, tanto para el input como para el propio cascaron que los envuelven**/
+    .fieldset {
+      width: 300px;
+      text-align: center;
+      padding-left: 10px;
+      border-color: white;
+      border-width: 5px;
+      display: block;
+      margin: auto;
+
+      legend {
+        color: white;
+      }
+
+      input {
+        border: none;
+
+        width: auto;
+        text-align: center;
+      }
+    }
+    .fieldsetpwd {
+      width: 300px;
+      text-align: center;
+      padding: 10px;
+      border-color: white;
+      border-width: 5px;
+      display: block;
+      margin: auto;
+
+      legend {
+        color: white;
+      }
+
+      input {
+        border: none;
+        width: 25%;
+        width: auto;
+        text-align: center;
+      }
+    }
+    .checkbox {
+      text-align: center;
+      margin-top: 20px;
+      display: block;
+
+      label {
+        color: white;
+      }
+    }
+  }
+  /**Con el padding de 20 separamos el boton 20px arriba y 20px abajo del contenedor que lo contiene**/
+  .boton {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    display: block;
+    margin: auto;
+
+    /**Con el padding de 5 separamos el link del propio "cascaron negro" 5px arriba y 5px abajo.
+Con inset le damos ese estilo al borde metalizado tan chulo **/
+
+    a {
+      background: #000;
+      color: #fff;
+      border-style: inset;
+      border-radius: 90px;
+      padding: 5px;
+      display: block;
+      margin-bottom: 100%;
+    }
+  }
+}

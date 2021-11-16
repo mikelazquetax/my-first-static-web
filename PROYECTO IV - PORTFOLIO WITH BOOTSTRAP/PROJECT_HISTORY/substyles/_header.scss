@@ -1,0 +1,17 @@
+/**h1 es una class**/
+.h1 {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  @include mobile {
+    font-size: 150%;
+  }
+
+  /**con hover conseguimos que al pasar el ratón por encima de la cabecera se ponga el color verde y 
+  se aplique un padding de 5px consiguiendo un efecto de resalto **/
+  &:hover {
+    color: green;
+    text-decoration: none;
+    padding: 5px;
+  }
+}
