@@ -1,0 +1,112 @@
+.cards {
+
+    @include mobile{
+        flex-direction: column;
+    }
+  display: inline-flex;
+
+  color: white;
+  width: 75%;
+
+  padding-top: 15%;
+  padding-left: 12%;
+  height: 300%;
+
+  .sedans {
+    background-color: #e29444;
+    padding: 5%;
+    border-radius: 25px;
+
+    .imgh1 {
+        height: 30%;
+        h2 {
+            text-align: center;
+          }
+      }
+
+  
+    p {
+      text-align: center;
+      height: auto;
+    }
+
+    .bt1 {
+      margin-top: 17%;
+      color: #e29444;
+      background-color: white;
+      height: 10%;
+      border-radius: 40px;
+      border: none;
+      @include mobile{
+        margin-left: 30%;
+    }
+    @include desktop{
+        margin-top: 25%;
+    }
+    }
+  }
+}
+
+
+
+ 
+
+.suvs {
+  background-color: #5cacb2;
+  padding: 5%;
+  border-radius: 25px;
+  .imgh2 {
+    height: 30%;
+    h2 {
+        text-align: center;
+      }
+  }
+ 
+  p {
+    text-align: center;
+    height: auto;
+  }
+
+  .bt2 {
+    margin-top: 25%;
+    color: #5cacb2;
+    background-color: white;
+    height: 10%;
+    border-radius: 40px;
+    border: none;
+    @include mobile{
+        margin-left: 30%;
+    }
+
+  }
+}
+
+
+
+.luxury {
+  background-color: #085a5b;
+  padding: 5%;
+  border-radius: 25px;
+  .imgh3 {
+    height: 30%;
+    h2 {
+        text-align: center;
+      }
+  }
+  
+  p {
+    text-align: center;
+  }
+
+  .bt3 {
+    margin-top: 26%;
+    color: #085a5b;
+    background-color: white;
+    height: 10%;
+    border-radius: 40px;
+    border: none;
+    @include mobile{
+        margin-left: 30%;
+    }
+  }
+}
