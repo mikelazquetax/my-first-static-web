@@ -1,0 +1,151 @@
+@import "./responsive";
+
+body {
+  background: #333;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  height: 600px;
+
+  .header {
+    background-color: red;
+    text-align: center;
+  }
+
+  
+  .intro{
+
+    width: 50%;
+    padding-inline: 5%;
+    margin-left: 20%;
+    @include mobile {
+        margin-left: 1%;
+        width: 90%;
+      }
+}
+
+
+  .all {
+    display: inline-flex;
+    height: 600px;
+    padding: 10px;
+    margin: 4px;
+    flex-direction: row;
+    @include mobile {
+        flex-direction: column;
+        margin-left: 0%;
+        margin-right: 2%;
+      }
+    margin-left: 25%;
+    margin-top:5%;
+
+    .video iframe{
+        @include mobile {
+            width: 110%;
+            height: 120%;
+            
+          }
+       
+     
+    }
+
+    .sale-box {
+      display: inline-block;
+      background-color: transparent;
+      border-color: black;
+      margin-left: 10%;
+      left: 10%;
+      top: 10%;
+      width: 250px;
+      height: 400px;
+      @include mobile {
+        margin-top: 15%;
+        margin-left: 3%;
+
+        
+      }
+
+      .title {
+        background-color: red;
+        color: white;
+        font-size: xx-small;
+        border-radius: 1px;
+        text-align: center;
+        width: 300px;
+
+        h1{
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+        }
+
+
+      }
+
+      .cover{
+        background-color: red;
+        width: 300px;
+        height: 400px;
+       
+
+        img{
+            width: 300px;
+            height: 400px;
+        }
+
+    }
+    
+    .cart{
+        background-color: red;
+        width: 300px;
+        height: 50px;
+
+        .botones{
+            display: inline-flex;
+            padding-inline: 2%;
+            color: black;
+            margin-left: 3%;
+            font-size: large;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            
+            .button{
+                color:black;
+            }
+        
+        }
+        
+     
+    }
+    .total{
+        background-color: red;
+        width: 300px;
+        height: 30px;
+      text-align: center;
+
+      h2{
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        color: white;
+
+        p{
+            color: white;
+            display: inline;
+            padding-inline: 10px
+        }
+    }
+      
+    }
+    .btocaja{
+        border-radius: 2px;
+        color:red;
+        font-size: large;
+        border-color: black;
+        border-width: 1px;
+        margin-top: 5px;
+        margin-left: 30px;
+    }
+    .btocaja:hover{
+        padding: 5px;
+    }
+
+    }
+  }
+}

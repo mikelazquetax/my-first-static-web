@@ -74,6 +74,11 @@ body {
   text-align: right;
 }
 
+.grid-container .bloq3 a {
+  color: white;
+  text-decoration: none;
+}
+
 .grid-container .bloq3 h3 {
   color: black;
 }
