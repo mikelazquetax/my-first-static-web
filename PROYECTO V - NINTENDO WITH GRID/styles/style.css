@@ -66,6 +66,11 @@ body {
   color: white;
 }
 
+.grid-container .bloq2 a {
+  color: white;
+  text-decoration: none;
+}
+
 .grid-container .bloq3 {
   -ms-grid-row: 2;
   -ms-grid-row-span: 2;
@@ -96,6 +101,11 @@ body {
   grid-row: 1 / 3;
   color: white;
   text-align: right;
+}
+
+.grid-container .bloq5 a {
+  color: white;
+  text-decoration: none;
 }
 
 .grid-container .bloq6 {
