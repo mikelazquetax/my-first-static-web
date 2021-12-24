@@ -1,0 +1,232 @@
+body{
+    background-color: #333;
+}
+
+.mainContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 5%;
+}
+
+.card_pkm{
+
+    font-weight: bold;
+    margin: 10px;
+    padding: 20px;
+    background-color: #cccc;
+    font-size: 20px;
+    border: 4px solid lightblue;
+    color: white;
+    width: 25%;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18;
+}
+
+.card_pkm:hover{
+    padding: 25px ;
+    background-color: rgb(44, 144, 202);
+}
+
+h2{
+    padding: 1%;
+
+}
+p{
+    padding: 1%;
+    border: solid;
+    border-color:red
+}
+
+img{
+    border-radius: 50%;
+}
+
+.modal{
+    position: fixed;
+    top:30%;
+    left:50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: 200ms ease-in-out;
+    border: 1px solid crimson;
+    border-radius: 10%;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+}
+
+.modal.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header{
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+.modal-header .title{
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-header .close-button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-body{
+    padding: 10px 15px;
+}
+
+.habilidad{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    border: none
+}
+
+.selector{
+text-align: center;
+margin-left: 40%;
+padding: 1px;
+background-color: rgb(240, 240, 128);
+font-weight: bold;
+
+}
+
+.selector:hover{
+    padding: 2px;
+}
+
+.btonBuscar {
+   
+    width: 10%;
+    padding: 8px;
+    height: 35%;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: rgb(201, 48, 48);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btonBuscar:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.btonBuscar:active {
+    color: rgb(231, 55, 55)
+}
+
+.btonBuscar:active:after {
+    background: transparent;
+}
+
+.btonBuscar:hover:before {
+    opacity: 1;
+}
+
+.btonBuscar:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(207, 80, 80);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-left: 25%;
+
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+  }
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
