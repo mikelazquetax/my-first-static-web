@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script type="text/javascript" src="./script.js"></script>
+    <title>Pokedex</title>
+</head>
+<body>
+    <h1>
+    <select label='search by Type' name="tipos" id="tiposPokemon" class="selector">
+        <option value="showMeAll">Show Me All</option>
+        <option value="grass">Grass</option>
+        <option value="fire" data-imgesrc="./fire.png">Fire</option>
+        <option value="water">Water</option>
+        <option value="bug">Bug</option>
+        <option value="normal">Normal</option>
+        <option value="poison">Poison</option>
+        <option value="electric">Electric</option>
+        <option value="ground">Ground</option>
+        <option value="fairy">Fairy</option>
+        <option value="fighting">Fighting</option>
+        <option value="psychic">Psychic</option>
+        <option value="rock">Rock</option>
+        <option value="ghost">Ghost</option>
+        <option value="dragon">Dragon</option>
+        <option value="ice">Ice</option>
+    </select>
+    <button id='filtro' class="btonBuscar">Search Pokemon</button>
+    <div class="display">
+    <label class="label toggle">
+      <input id="switch" type="checkbox" class="toggle_input" />
+      <div class="toggle-control"></div>
+    </label>
+  </div>
+      
+</h1>
+</body>
+</html>
