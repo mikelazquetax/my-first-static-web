@@ -51,9 +51,10 @@ window.onload = () => {
     user = "jugador"; // identificamos al usuario como el jugador cuando se pulsa el boton
 
     if (audio.paused == true)
+    audio.play();
       if (contador == 0) {
         //Musica Maestro. Comienza la batalla
-         audio.play();
+         
 
         // La primera vez que se elige pokemon el contador está a cero
         contador = contador + 1; // Se ha elegido el primer pokemon. El contador pasa a 1
