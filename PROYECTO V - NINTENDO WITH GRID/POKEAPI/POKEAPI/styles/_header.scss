@@ -1,4 +1,5 @@
 h1{
+  background-color: transparent;
     @include mobile{
 display: inline-flex;
 padding-inline: 3%;
@@ -33,6 +34,7 @@ text-align: center;
     width: 30%;
     margin-left: 3%;
     padding: 3px;
+    margin-top: 1%;
   }
   @include ipad{
       width: 40%;
@@ -113,65 +115,59 @@ text-align: center;
   }
 }
 
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  @include mobile{
-    margin-left: 2%;
-    margin-top: 2%;
-    width: 20px;
-}
-@include ipad{
-    margin-left: 0%;
-    width: 160px;
-}
-  height: 34px;
-  margin-left: 25%;
+$color_checkbox_success:#4cd964;
+$color_checkbox_default:#8E8E93;
+$transition: .3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$width: 50px;
+$height: $width/2;
 
-  input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+.display{
+  position: absolute;
+  top: 8%;
+  left: 90%;
+  transform: translate(-50%, -50%)
+}
 
-    :checked {
-      background-color: #2196f3;
+.toggle{
+  
+   .toggle-control{
+     transition: $transition;
+      width: $width;
+      height: $height;
+      display: block;
+     border: 2px solid $color_checkbox_default;
+     border-radius: $height;
+     background-color: rgba(black,.06);
+     position: relative;
+     &:after{
+       transition: $transition;
+       content: "";
+       width: $width/2;
+       height: $height;
+       display: block;
+       background-color: #fff;
+       border-radius: 50%;
+       box-shadow: 0 1px 2px rgba(black, .4),0 3px 2px rgba(black,.4);
+       position: absolute;
+       top: 0;
+       left: 0;
+     }
+   }
+   
+  input{
+    display: none;
+    &:checked + .toggle-control{
+      border-color: $color_checkbox_success;
+      background-color: $color_checkbox_success;
+      &:after{
+        left: $width/2;
+      }
     }
   }
+  
+ 
+  
 }
 
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  @include mobile{
-      width: 50%;
-  }
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
 
-  :before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-  }
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-  :before {
-    border-radius: 50%;
-  }
-}
 }

@@ -24,7 +24,7 @@ window.onload = () => {
     //        obj.types = data.types[0].name
     obj.types = data.types.map((item) => item.type.name).join(", ");
     tipologia = data.types.map((item) => item.type.name);
-    obj.img = data.sprites.front_shiny;
+    obj.img = data.sprites.other.dream_world.front_default;
     obj.stats = data.stats.map((item) => {
       return item.estadisticas;
     });
@@ -33,7 +33,7 @@ window.onload = () => {
     pokemonDiv.id = id;
 
     let idPoke = document.createElement("p");
-    idPoke.id = id;
+    idPoke.id = id + 'p';
     idPoke.innerText = obj.id;
 
     pokemonDiv.appendChild(idPoke);
@@ -109,64 +109,64 @@ window.onload = () => {
 clasesPokemon = (tipologia, id) => {
   switch (tipologia[0]) {
     case "grass":
-      hierba = document.getElementById("foto" + id);
-      hierba.style.backgroundColor = "green";
+      hierba = document.getElementById(id + 'p');
+      hierba.style.borderColor = "green";
       break;
     case "fire":
-      fuego = document.getElementById("foto" + id);
-      fuego.style.backgroundColor = "red";
+      fuego = document.getElementById(id + 'p');
+      fuego.style.borderColor = "red";
       break;
     case "water":
-      water = document.getElementById("foto" + id);
-      water.style.backgroundColor = "blue";
+      water = document.getElementById(id + 'p');
+      water.style.borderColor = "blue";
       break;
     case "bug":
-      bug = document.getElementById("foto" + id);
-      bug.style.backgroundColor = "lightgreen";
+      bug = document.getElementById(id + 'p');
+      bug.style.borderColor = "lightgreen";
       break;
     case "normal":
-      normal = document.getElementById("foto" + id);
-      normal.style.backgroundColor = "lightsalmon";
+      normal = document.getElementById(id + 'p');
+      normal.style.borderColor = "lightsalmon";
       break;
     case "poison":
-      veneno = document.getElementById("foto" + id);
-      veneno.style.backgroundColor = "purple";
+      veneno = document.getElementById(id + 'p');
+      veneno.style.borderColor = "purple";
       break;
     case "electric":
-      electric = document.getElementById("foto" + id);
-      electric.style.backgroundColor = "yellow";
+      electric = document.getElementById(id + 'p');
+      electric.style.borderColor = "yellow";
       break;
     case "ground":
-      ground = document.getElementById("foto" + id);
-      ground.style.backgroundColor = "brown";
+      ground = document.getElementById(id + 'p');
+      ground.style.borderColor = "brown";
       break;
     case "fairy":
-      hada = document.getElementById("foto" + id);
-      hada.style.backgroundColor = "pink";
+      hada = document.getElementById(id + 'p');
+      hada.style.borderColor = "pink";
       break;
     case "fighting":
-      lucha = document.getElementById("foto" + id);
-      lucha.style.backgroundColor = "orange";
+      lucha = document.getElementById(id + 'p');
+      lucha.style.borderColor = "orange";
       break;
     case "psychic":
-      psico = document.getElementById("foto" + id);
-      psico.style.backgroundColor = "violet";
+      psico = document.getElementById(id + 'p');
+      psico.style.borderColor = "violet";
       break;
     case "rock":
-      roca = document.getElementById("foto" + id);
-      roca.style.backgroundColor = "gray";
+      roca = document.getElementById(id + 'p');
+      roca.style.borderColor = "gray";
       break;
     case "ghost":
-      fant = document.getElementById("foto" + id);
-      fant.style.backgroundColor = "fuchsia";
+      fant = document.getElementById(id + 'p');
+      fant.style.borderColor = "fuchsia";
       break;
     case "dragon":
-      fant = document.getElementById("foto" + id);
-      fant.style.backgroundColor = "dodgerblue";
+      fant = document.getElementById(id + 'p');
+      fant.style.borderColor = "dodgerblue";
       break;
     case "ice":
-      fant = document.getElementById("foto" + id);
-      fant.style.backgroundColor = "cyan";
+      fant = document.getElementById(id + 'p');
+      fant.style.borderColor = "cyan";
       break;
   }
 };
@@ -262,7 +262,7 @@ let FilterInDom = (data) => {
   //        obj.types = data.types[0].name
   obj.types = valor.types.map((item) => item.type.name).join(", ");
   tipologia = valor.types.map((item) => item.type.name);
-  obj.img = valor.sprites.front_shiny;
+  obj.img = valor.sprites.other.dream_world.front_default;
   obj.stats = valor.stats.map((item) => {
     return item.estadisticas;
   });
@@ -271,7 +271,7 @@ let FilterInDom = (data) => {
   pokemonDiv.id = valor.id;
 
   let idPoke = document.createElement("p");
-  idPoke.id = id;
+  idPoke.id = id + 'p';
   idPoke.innerText = obj.id;
 
   pokemonDiv.appendChild(idPoke);
