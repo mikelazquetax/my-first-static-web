@@ -1,0 +1,144 @@
+body{
+    background-color: #333;
+}
+h1{
+   
+    font-family: 'Lato';
+    color: white;
+    text-align: center;
+}
+#adder{
+    text-align: center;
+}
+.mainContainer{
+    display: flex;
+    padding-inline: 4%;
+    flex-direction: column;
+ 
+}
+.deseoClase{
+    
+    margin-top: 3%;
+    display: inline-flex;
+    background-color: crimson;
+    text-align: end;
+    border-style: double;
+    width: 100% ;
+    overflow: scroll;
+
+    border-color: cyan;
+
+ 
+}
+
+
+
+.parrafoClase{
+    display: flex;
+    margin-right: auto;
+   
+    }
+
+    button {
+        border: none;
+        font-family: 'Lato';
+        color: white;
+        font-size: inherit;
+
+        background: none;
+        cursor: pointer;
+        padding: 5px 8px;
+        display: inline-block;
+        margin: 15px 30px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 700;
+        outline: none;
+        position: relative;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+      }
+
+      button:hover{
+        color: cyan;
+      }
+      
+      button:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+      }
+      
+      
+      button:before {
+        font-family: 'FontAwesome';
+        
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        position: relative;
+        -webkit-font-smoothing: antialiased;
+      }
+      
+
+.botonBorrar{
+    background: #227dd3;
+    color: #fff;
+    content: "\f014";
+
+}    
+.botonBorrar:hover {
+    background: #34495e;
+  }
+  
+  .botonBorrar:active {
+    background: #2c3e50;
+    top: 2px;
+  }
+  
+  .botonBorrar:before {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    line-height: 3;
+    font-size: 140%;
+    width: 60px;
+  }
+
+
+
+  .botonTachar {
+    background: #9cf379;
+    color: black;
+  }
+  
+  .botonTachar:hover {
+    background: #34495e;
+    color: white;
+  }
+  
+  .botonTachar:active {
+    background: #34495e;
+    top: 2px;
+  }
+  
+  .botonTachar:before {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    line-height: 3;
+    font-size: 140%;
+    width: 60px;
+  }
+
+  .icon-send:before {
+    content: "\f1d8";
+  }
